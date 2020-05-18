@@ -19,3 +19,4 @@ Route::get('/communities', 'PostsController@index');
 Route::post('/communities', 'PostsController@create');
 Route::put('/communities/{id}', 'PostsController@update');
 Route::delete('/communities/{id}', 'PostsController@delete');
+Route::get('/communities/{id}', 'PostsController@read');
