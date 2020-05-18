@@ -19,7 +19,7 @@ class PostsController extends Controller
         $temp->name = $req->input('name');
         $temp->about = $req->input('about');
         $temp->save();
-        return redirect('/communities/'.$id);
+        return redirect('/communities/'.$temp->id);
     }
     public function delete($id)
     {

@@ -9,6 +9,10 @@
 </head>
 <body>
     <div class="container">
+    <h1><b>{{$data->name}}</b></h1>
+    <hr>
+    <p>{{$data->about}}</p>
+    <a class="btn btn-primary" href="{{$data->link}}">Join</a>
     <a href="/communities">Back to list</a>
     </div>
 </body>

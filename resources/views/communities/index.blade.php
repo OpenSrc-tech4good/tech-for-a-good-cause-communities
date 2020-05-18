@@ -11,10 +11,11 @@
     <div class="container">
     <h1>Communities</h1>
     <form action="/communities" method="post">
-        <input type="" placeholder="" name=""/>
-        <input type="" placeholder="" name=""/>
-        <input type="" placeholder="" name=""/>
-        <button type="submit">Add</button>
+    @csrf
+        <input type="text" placeholder="Name of your Organization" name="name"/>
+        <input type="text" placeholder="Add a link for people to join" name="link"/>
+        <input type="text" placeholder="Describe what your organization is" name="about"/>
+        <button class="btn btn-success" type="submit">Add</button>
     </form>
     @foreach($data as $key)
       <div class="row">
@@ -23,11 +24,11 @@
           <p>{{$key->about}}</p>
         </div>
         <div class="col-6 actions">
-          <a href="/communities/{{$key->id}}">View</a>
-          <a href="/">Delete</a>
+          <a class="btn btn-secondary" href="/communities/{{$key->id}}">View</a>
+          <a class="btn btn-danger" href="/">Delete</a>
         </div>
       </div>
+      @endforeach
     </div>
-    @endforeach
   </body>
 </html>
